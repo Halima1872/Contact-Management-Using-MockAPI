@@ -7,9 +7,9 @@ const Welcome = () => {
     const location = useLocation();
     const userId = location.state && location.state.userId;
     console.log(userId);
-    const [showContactCard, setShowContactCard] = useState(true);
+    const [showContactCard, setShowContactCard] = useState(false);
     const [showAddContact, setShowAddContact] = useState(false);
-    const [showAllContacts, setShowAllContacts] = useState(false);
+    const [showAllContacts, setShowAllContacts] = useState(true);
     return (
         <>
         <nav className="navbar mb-3 navbar-expand-lg bg-body-tertiary">

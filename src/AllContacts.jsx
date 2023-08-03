@@ -40,7 +40,7 @@ const AllContacts = ({ userId }) => {
                         <div className="card allcards mb-3 " key={item.id}>
                             
                             <div className="card-header mt-0 mb-0">
-                                <h5 className="card-title">{item.name}</h5>
+                                <h5 className="card-title mb-0">{item.name}</h5>
                             </div>
                             
 

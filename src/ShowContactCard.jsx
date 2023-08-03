@@ -1,9 +1,9 @@
 import Storage from "./Storage";
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './ShowContactCard.css'
-const ContactCard = ({userId}) =>{
-    const [items,setItems] = useState({});//[{},{}
+const ContactCard = ({ userId }) => {
+    const [items, setItems] = useState({});//[{},{}
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -19,22 +19,26 @@ const ContactCard = ({userId}) =>{
     }, [userId]);
 
 
-    return(
+    return (
 
-<div className="container">
-    
-            <div className="card mycard"  >
-  <div className="card-header">
-    Contact Card
-  </div>
-  <ul className="list-group list-group-flush">
-    <li className="list-group-item">Name : {items.username}</li>
-    <li className="list-group-item">Email : {items.email}</li>
-    <li className="list-group-item">Contact Number : {items.contactNumber}</li>
-  </ul>
-</div>
-</div>
-            
+        <div className="maindiv">
+            <div className="thisdiv border border-3 rounded-1">
+
+                <div  >
+                    <div className="border-bottom border-3 thisis " >
+                        Contact Card
+                    </div>
+                    <div className="mt-2 mb-2">
+                        <div className="ms-3 ">Name : {items.username}</div>
+                        <div className="ms-3">Email : {items.email}</div>
+                        <div className="ms-3 ">Contact Number : {items.contactNumber}</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
     )
 
 }

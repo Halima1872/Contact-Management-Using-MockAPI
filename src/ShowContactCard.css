@@ -1,18 +1,33 @@
 .card{
     padding: 0px;
-    width: 500px;
+    width: 100%;
     font-size: xx-large;
 
 }   
-.container{
+.maindiv{
     height: 100%;
     width: 100%;
+    
+   
     
 }
 .mycard{
     margin-top: 50px;
     margin-left: 450px;
     font-size: 1000px;
-    width: 1000px;
+    width: 100%;
 
 }
+.thisdiv{
+    margin-top: 50px;
+    margin-left: 500px;
+    font-size: 30px;
+    width: 500px;
+    
+    text-align: left;
+    
+}
+.thisis{
+    text-align: center;
+}
+
