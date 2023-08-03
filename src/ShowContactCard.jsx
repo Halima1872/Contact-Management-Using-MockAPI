@@ -1,6 +1,7 @@
 import Storage from "./Storage";
 import {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import './ShowContactCard.css'
 const ContactCard = ({userId}) =>{
     const [items,setItems] = useState({});//[{},{}
     useEffect(() => {
@@ -20,15 +21,20 @@ const ContactCard = ({userId}) =>{
 
     return(
 
-        <div>
-            <h2> Contact Card</h2>
-
-            <div>
-                <h2> Name : {items.username}</h2>
-                <h2> Email : {items.email}</h2>
-                <h2> Contact Number : {items.contactNumber}</h2>
-                </div>
-        </div>
+<div className="container">
+    
+            <div className="card mycard"  >
+  <div className="card-header">
+    Contact Card
+  </div>
+  <ul className="list-group list-group-flush">
+    <li className="list-group-item">Name : {items.username}</li>
+    <li className="list-group-item">Email : {items.email}</li>
+    <li className="list-group-item">Contact Number : {items.contactNumber}</li>
+  </ul>
+</div>
+</div>
+            
     )
 
 }

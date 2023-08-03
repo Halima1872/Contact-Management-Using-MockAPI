@@ -20,35 +20,39 @@ const AddContact = ({userId}) => {
 
     }
     return(
-        <div className="event-form">
-      <form onSubmit={handleSubmit}>
-      <h2>Add Contact</h2>
-      <div>
-        <label className="form-element" htmlFor="name">Name:</label>
-        <input className="form-element" type="text" id="name" name="name" required
-         />
-        </div>
-        <div>
-        <label className="form-element" htmlFor="contactNumber">Contact Number:</label>
-        <input className="form-element" type="number" id="contactNumber" name="contactNumber" required
-        />
-        </div>
-        <div>
-        <label className="form-element" htmlFor="email">Email:</label>
-        <input className="form-element" type="email" id="email" name="email" required
-        />
-        </div>
-        <div>
-        <label className="form-element" htmlFor="time">Address:</label>
-        <input className="form-element" type="text" id="address" name="address" required
-        />
-        </div>
+        <div className="div1 event-form mt-3">
+          <form  onSubmit={handleSubmit}>
+            <h3 className="mt-3">Add Contact</h3>
+            <div className="mb-3 container">
+            <label className="form-label" htmlFor="name">Name:</label>
+            <input className="form-element form-control" type="text" id="name" name="name" 
+            required />
+            </div>
+            <div className="mb-3 container">
+            <label className="form-element form-label" htmlFor="contactNumber">Contact Number:</label>
+            <input className="form-element form-control" type="number" id="contactNumber" name="contactNumber" 
+            required minLength={10} maxLength={10} />
+
+            </div>
+            <div className="mb-3 container">
+            <label className="form-element form-label" htmlFor="email">Email:</label>
+            <input className="form-element form-control" type="email" id="email" name="email"  />
+            </div>
+
+            <div className="mb-3 container">
+            <label className="form-label" htmlFor="address">Address:</label>
+            <input className="form-element form-control" type="text" id="address" name="address"
+            required />
+            </div>
+
+            
+  
+            <div className="mb-3 container">
+            <button className="form-element btn btn-primary mb-3" type="submit">Add Contact</button>
+            </div>
+            
         
-        <div>
-          <button className="form-element" type="submit">Add Contact</button>
-          
-        </div>
-      </form>
+        </form>
     </div>
     )
 

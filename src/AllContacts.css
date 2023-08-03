@@ -1,0 +1,26 @@
+.card{
+    font-size: large;
+    width: 400px;
+    
+}
+
+.allcards{
+    text-align: left;
+    width: 600px;
+    
+}
+.card-body{
+    text-align: left;
+}
+.card-footer{
+    text-align: center;
+}
+
+.this{
+    margin-left: 70px;
+    margin-right: 0px;
+    align-items: flex-end;
+    
+}
+
+

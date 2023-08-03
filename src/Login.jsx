@@ -24,24 +24,28 @@ const Login = () => {
     }
 
     return (
-        <form method="post" onSubmit={handleLogin} >
-        <h1>Login</h1>
-        <div>
-        <label className="form-element" htmlFor="name">Username:</label>
-        <input className="form-element" type="text" id="name" name="name" required/>
-        </div>
-        <div>
-        <label className="form-element" htmlFor="password">Password:</label>
-        <input className="form-element" type="password" id="password" name="password" required/>
-        </div>
-        <div>
-        <button className="form-element" type="submit">Login</button>
-        </div>
-        <div>
-        <label  id="already" className="form-element" htmlFor="login">Dont have an account?</label>
-        <button className="form-element" onClick={redirect} >Sign Up</button>
-        </div>
-    </form>
+        <form method="post" onSubmit={handleLogin}>
+            <h2 className="mt-3">Login</h2>
+            <div className="mb-3 container">
+            <label className="form-label" htmlFor="name">Username:</label>
+            <input className="form-element form-control" type="text" id="name" name="name"  required />
+            </div>
+            
+            <div className="mb-3 container">
+            <label className="form-element form-label" htmlFor="password">Password:</label>
+            <input className="form-element form-control"  aria-describedby="passwordHelpBlock" type="password" id="password" name="password" required />
+            </div>
+            <div className="mb-3 container">
+            <button className="form-element btn btn-primary mb-3" type="submit">Login</button>
+            </div>
+            <div className="mb-3 ">
+            <label  id="already" className="form-label mb-3" htmlFor="login">Dont have an account?</label>
+            <button className="form-element btn btn-primary mb-3 ms-3 mt-2" onClick={redirect} >Sign Up</button>
+            </div>
+            
+        
+        
+        </form>
     )
 }
 export default Login;

@@ -34,42 +34,45 @@ export default function Signup() {
     }
 
     return (
+        <div className="div1 rounded-1">
         <form method="post" onSubmit={handleSubmit}>
-            <h1>Register</h1>
-            <div>
-            <label className="form-element" htmlFor="name">Username:</label>
-            <input className="form-element" type="text" id="name" name="name" 
+            <h2 className="mt-3">Register</h2>
+            <div className="mb-3 container">
+            <label className="form-label" htmlFor="name">Username:</label>
+            <input className="form-element form-control" type="text" id="name" name="name" 
             value= {username} required
             onChange={(e) => setUsername(e.target.value)} />
             </div>
-            <div>
-            <label className="form-element" htmlFor="email">Email:</label>
-            <input className="form-element" type="email" id="email" name="email" 
+            <div className="mb-3 container">
+            <label className="form-element form-label" htmlFor="email">Email:</label>
+            <input className="form-element form-control" type="email" id="email" name="email" 
             value= {email} required
             onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div>
-            <label className="form-element" htmlFor="contactNumber">Contact Number:</label>
-            <input className="form-element" type="number" id="contactNumber" name="contactNumber" 
-            value= {contactNumber} required
+            
+            <div className="mb-3 container">
+            <label className="form-element form-label" htmlFor="contactNumber">Contact Number:</label>
+            <input className="form-element form-control" type="number" id="contactNumber" name="contactNumber" 
+            value= {contactNumber} required minLength={10} maxLength={10}
             onChange={(e) => setContactNumber(e.target.value)} />
 
             </div>
-            <div>
-            <label className="form-element" htmlFor="password">Password:</label>
-            <input className="form-element" type="password" id="password" name="password"
+            <div className="mb-3 container">
+            <label className="form-element form-label" htmlFor="password">Password:</label>
+            <input className="form-element form-control"  aria-describedby="passwordHelpBlock" type="password" id="password" name="password"
             value= {password} required
             onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <div>
-            <button className="form-element" type="submit">Sign Up</button>
+            <div className="mb-3 container">
+            <button className="form-element btn btn-primary mb-3" type="submit">Sign Up</button>
             </div>
-            <div>
-            <label  id="already" className="form-element" htmlFor="login">Already have an account?</label>
-            <button className="form-element" onClick={redirect} >Login</button>
+            <div className="mb-3 ">
+            <label  id="already" className="form-label mb-3" htmlFor="login">Already have an account?</label>
+            <button className="form-element btn btn-primary mb-3 ms-3 mt-2" onClick={redirect} >Login</button>
             </div>
             
         
         </form>
+        </div>
     )
 }
